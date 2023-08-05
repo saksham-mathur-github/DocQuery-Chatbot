@@ -1,0 +1,7 @@
+streamlit
+docquery
+transformers
+pdf2image
+pytesseract
+Pillow
+PyPDF2
