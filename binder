@@ -1,0 +1,22 @@
+# Binder configuration file
+# This file contains the specifications for the Binder environment.
+# See https://mybinder.readthedocs.io/en/latest/config_files.html for more information.
+
+# Binder runtime
+binder:
+  # The image to run.
+  # This can be a link to a container on Docker Hub, or a path to a Dockerfile or Singularity file.
+  # If you want to use a custom Dockerfile, make sure it's in your repository.
+  image: "streamlit/streamlit:latest"
+
+  # Specify the commands to run the app.
+  # The "$PORT" environment variable is provided by Binder and will be dynamically set at runtime.
+  # Change "app.py" to your Streamlit app's filename if different.
+  command:
+    - "streamlit"
+    - "run"
+    - "app.py"
+  # Ports to expose
+  ports:
+    - port: 8501
+      protocol: tcp
